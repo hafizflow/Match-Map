@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "106064876206",
+    "project_id": "match-map-apk",
+    "storage_bucket": "match-map-apk.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:106064876206:android:f5420a9a9eb6c93041533f",
+        "android_client_info": {
+          "package_name": "com.example.match_map_apk"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCHoxRDjzTYaHn7VSlaGBZxP_edL6RZpPE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
