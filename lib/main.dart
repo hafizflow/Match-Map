@@ -5,9 +5,15 @@ import 'package:match_map_apk/screens/map_screen.dart';
 import 'package:match_map_apk/screens/setting_screen.dart';
 import 'package:provider/provider.dart';
 
-void main() async {
+import 'firebase_options.dart';
+
+Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
+  await Firebase.initializeApp(
+    // solved the run problem for both ios and android
+    name: 'hafizflow',
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(const MatchMapApp());
 }
 
