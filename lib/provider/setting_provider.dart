@@ -3,6 +3,7 @@ import 'dart:developer';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:match_map_apk/utility/demo_lists.dart';
+import 'package:sliding_up_panel/sliding_up_panel.dart';
 
 class SettingProvider extends ChangeNotifier {
   String sports = DemoLists.sportName[0];
@@ -76,4 +77,6 @@ class SettingProvider extends ChangeNotifier {
     isPanelClosed = value;
     notifyListeners();
   }
+
+  final panelController = PanelController();
 }

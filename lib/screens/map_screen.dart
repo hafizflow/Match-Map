@@ -47,19 +47,21 @@ class _MapScreenState extends State<MapScreen> {
     return Scaffold(
       body: Consumer<SettingProvider>(builder: (context, provider, _) {
         return SlidingUpPanel(
+          controller: provider.panelController,
           onPanelOpened: () {
             provider.setPanelClosed(false);
           },
           onPanelClosed: () {
             provider.setPanelClosed(true);
           },
+          defaultPanelState: PanelState.CLOSED,
           minHeight: MediaQuery.of(context).size.height * 0.1,
           maxHeight: MediaQuery.of(context).size.height * 0.87,
           panelBuilder: (controller) {
             if (provider.isPanelClosed) {
               return const SelectedLocation();
             } else {
-              return PanelWidget(controller: controller);
+              return PanelWidget(controller: provider.panelController);
             }
           },
           body: Stack(

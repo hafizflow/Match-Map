@@ -29,7 +29,7 @@ class MatchMapApp extends StatelessWidget {
       create: (context) => SettingProvider(),
       builder: (context, snapshot) {
         return const MaterialApp(
-          locale: Locale('bn'),
+          locale: Locale('en'),
           localizationsDelegates: [
             AppLocalizations.delegate,
             GlobalMaterialLocalizations.delegate,
