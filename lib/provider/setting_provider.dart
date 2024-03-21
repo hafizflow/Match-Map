@@ -62,13 +62,18 @@ class SettingProvider extends ChangeNotifier {
     // adding to firestore
     collection.add(itemData);
 
-    // log(textField1.text);
-    // log(textField2.text);
-    // log(textField3.text);
-    // log(sports);
-    // log(sliderValue.toString());
-    // log(location);
+    // clear text field
+    textField1.clear();
+    textField2.clear();
+    textField3.clear();
 
+    notifyListeners();
+  }
+
+  bool isPanelClosed = true;
+
+  setPanelClosed(bool value) {
+    isPanelClosed = value;
     notifyListeners();
   }
 }

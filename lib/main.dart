@@ -5,6 +5,9 @@ import 'package:match_map_apk/screens/map_screen.dart';
 import 'package:match_map_apk/screens/setting_screen.dart';
 import 'package:provider/provider.dart';
 
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
 import 'firebase_options.dart';
 
 Future<void> main() async {
@@ -26,6 +29,17 @@ class MatchMapApp extends StatelessWidget {
       create: (context) => SettingProvider(),
       builder: (context, snapshot) {
         return const MaterialApp(
+          locale: Locale('bn'),
+          localizationsDelegates: [
+            AppLocalizations.delegate,
+            GlobalMaterialLocalizations.delegate,
+            GlobalWidgetsLocalizations.delegate,
+            GlobalCupertinoLocalizations.delegate,
+          ],
+          supportedLocales: [
+            Locale('en'),
+            Locale('bn'),
+          ],
           debugShowCheckedModeBanner: false,
           home: MapScreen(),
         );
